@@ -16,6 +16,14 @@ upBtn.addEventListener('click', ()=> {changeSlide
 downBtn.addEventListener('click', ()=> {changeSlide
 ('down')});
 
+document.addEventListener('keydown', ()=> { //чтобы можно было двигать кнопкаме стрелками
+    if(event.key === 'ArrowUp') {
+        changeSlide('up')
+    } else if (event.key === 'ArrowDown') {
+        changeSlide('down')
+    }
+})
+
 function changeSlide(direction) {
     if (direction === 'up'){
         activeSlideIndex++;
