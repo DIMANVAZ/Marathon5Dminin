@@ -77,3 +77,15 @@ function colorify(element){
     element.style.backgroundColor = rndRGB
     element.style.boxShadow = `0 0 2px ${rndRGB}, 0 0 20px ${rndRGB}`
 }
+
+//----------чит----
+function winTheGame() {
+    function kill() {
+        const circle = document.querySelector('.circle')
+        if(circle){
+            circle.click();
+        }
+    }
+    setInterval(kill, 42)
+}
+
